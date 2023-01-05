@@ -2,6 +2,19 @@ function calculateWords(chapterOfABook) {
   const wordCount = {};
 
   // Write your code in here
+  // let wordsArr = chapterOfABook.replace(/[^a-zA-Z ]/g, "").split(" ");
+  let wordsArr = chapterOfABook.split(" ");
+  for(let i = 0; i < wordsArr.length; i++){
+    if(wordCount.hasOwnProperty(wordsArr[i])){
+      wordCount[wordsArr[i]] += 1;
+    } else {
+      wordCount[wordsArr[i]] = 1;
+    }
+  }
+  if(chapterOfABook === ""){
+    return {};
+  }
+
 
   return wordCount;
 }
