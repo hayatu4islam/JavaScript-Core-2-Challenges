@@ -1,3 +1,29 @@
 body {
   background-color: white;
 }
+
+#title {
+  text-align: center;
+}
+
+#seconds {
+  text-align: center;
+}
+
+#upper {
+  text-align: center;
+}
+
+#start {
+  background-color: lightgreen;
+  color: white;
+  margin: 1rem;
+  border: none;
+  height: 60px;
+}
+
+.content {
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}

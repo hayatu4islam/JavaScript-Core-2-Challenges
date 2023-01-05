@@ -1,4 +1,6 @@
-function startGame() {}
+function startGame() {
+
+}
 
 function keyBoardEvents(e) {
   if (e.keyCode === 83) {
@@ -9,3 +11,4 @@ function keyBoardEvents(e) {
 }
 
 document.addEventListener("keypress", keyBoardEvents);
+document
