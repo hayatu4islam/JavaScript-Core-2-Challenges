@@ -8,7 +8,7 @@ function guessNumber() {
   let guess = document.querySelector(".inputs-Values").value;
 
   //If the user inputs a bad input ie 0, empty string, number greater that 100, number less than zero Print "Please enter a number between 1 and 100"
-  if (guess <= 0 || guess > 100) {
+  if (guess <= 0 || guess > 100 || guess === "" || guess === " ") {
     // finalOutput.innerHTML = "Please enter a number between 1 and 100";
     document.querySelector(".final-output").innerHTML =
       "Please enter a number between 1 and 100";
@@ -18,7 +18,6 @@ function guessNumber() {
     console.log("Guess button clicked!");
   } else {
     numOfTriesLeft--;
-    // if (numOfTriesLeft >= 1) {
     //If the users guess is higher than the random number print Number is too high, try again (hint use .final-out class to print)
     if(numOfTriesLeft >= 1){
       if (guess > randomNumber) {
@@ -31,7 +30,6 @@ function guessNumber() {
           else if (guess < randomNumber) {
             document.querySelector(".final-output").innerHTML =
         "Number is too low, try again";
-            // numOfTriesLeft--;
             document.querySelector(
               ".Tries-output"
             ).innerHTML = `Number of Tries: ${numOfTriesLeft}`;
@@ -83,7 +81,7 @@ function newGame() {
   document.querySelector(".Tries-output").innerHTML = "Number of Tries: 7";
   document.querySelector(".final-output").innerHTML =
     "Guess a number between 1 and 100";
-  console.log("New game clicked!");
+    document.querySelector(".inputs-Values").value = "";
 }
 
 //keyboard exception
